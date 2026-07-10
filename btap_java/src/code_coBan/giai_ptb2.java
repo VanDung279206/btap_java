@@ -1,3 +1,5 @@
+package code_coBan;
+
 import java.util.Scanner;
 
 public class giai_ptb2 {
