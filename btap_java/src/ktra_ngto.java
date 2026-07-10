@@ -5,16 +5,21 @@ public class ktra_ngto {
         Scanner sc = new Scanner(System.in);
         System.out.println("nhập n: ");
         int n = sc.nextInt();
-        int dem = 0;
-        for (int i = 1; i <= n; i++) {
+        if (n < 2) {
+            System.out.println(n + "không phải là số nguyên tố");
+            return;
+        }
+        boolean check = true;
+        for (int i = 2; i * i <= n; i++) {
             if (n % i == 0) {
-                dem++;
+                check = false;
+                break;
             }
         }
-        if (dem == 2) {
-            System.out.println("số " + n + " là số nguyên tố");
+        if (check) {
+            System.out.println(n + " là số nguyên tố");
         } else {
-            System.out.println("số " + n + " không phải là số nguyên tố");
+            System.out.println(n + " không phải là số nguyên tố");
         }
     }
 }
