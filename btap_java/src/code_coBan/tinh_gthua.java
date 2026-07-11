@@ -1,4 +1,4 @@
-package mangDaChieu;
+package code_coBan;
 
 import java.util.Scanner;
 
