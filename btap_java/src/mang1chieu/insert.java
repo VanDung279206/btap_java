@@ -1,6 +1,5 @@
 package mang1chieu;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class insert {
