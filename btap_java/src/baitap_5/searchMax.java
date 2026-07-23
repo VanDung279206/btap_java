@@ -1,4 +1,4 @@
-package mangDaChieu;
+package baitap_5;
 
 import java.util.Scanner;
 
