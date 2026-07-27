@@ -7,7 +7,6 @@ public class HinhChuNhat {
     static double cd, cr;
 
     public static void main(String[] args) {
-        double cd, cr;
         nhap();
         xuat();
     }
