@@ -11,4 +11,20 @@ public class NhanVien {
         this.maNhanVien = maNhanVien;
         this.soSanPham = soSanPham;
     }
+
+    public String getMaNhanVien() {
+        return maNhanVien;
+    }
+
+    public void setMaNhanVien(String maNhanVien) {
+        this.maNhanVien = maNhanVien;
+    }
+
+    public int getSoSanPham() {
+        return soSanPham;
+    }
+
+    public void setSoSanPham(int soSanPham) {
+        this.soSanPham = soSanPham;
+    }
 }
