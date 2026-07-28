@@ -11,7 +11,7 @@ public class NhanVien {
 
     public NhanVien(String maNhanVien, int soSanPham) {
         this.maNhanVien = maNhanVien;
-        setSoSP(soSanPham);
+        setSoSanPham(soSanPham);
     }
 
     public String getMaNhanVien() {
