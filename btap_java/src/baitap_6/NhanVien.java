@@ -5,6 +5,8 @@ public class NhanVien {
     private int soSanPham;
 
     public NhanVien() {
+        maNhanVien = " ";
+        soSanPham = 0;
     }
 
     public NhanVien(String maNhanVien, int soSanPham) {
@@ -26,5 +28,10 @@ public class NhanVien {
 
     public void setSoSanPham(int soSanPham) {
         this.soSanPham = soSanPham;
+    }
+
+    public boolean coVuotChuan() {
+        if (soSanPham < 0) return false;
+        return soSanPham >= 0;
     }
 }
