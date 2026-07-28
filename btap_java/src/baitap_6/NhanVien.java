@@ -11,7 +11,7 @@ public class NhanVien {
 
     public NhanVien(String maNhanVien, int soSanPham) {
         this.maNhanVien = maNhanVien;
-        this.soSanPham = soSanPham;
+        setSoSP(soSanPham);
     }
 
     public String getMaNhanVien() {
@@ -27,11 +27,13 @@ public class NhanVien {
     }
 
     public void setSoSanPham(int soSanPham) {
-        this.soSanPham = soSanPham;
+        if (soSanPham > 0) this.soSanPham = soSanPham;
+        else this.soSanPham = 0;
     }
 
     public boolean coVuotChuan() {
-        if (soSanPham < 0) return false;
-        return soSanPham >= 0;
+        return soSanPham > 500;
     }
+
+
 }
