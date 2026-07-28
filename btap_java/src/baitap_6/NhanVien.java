@@ -45,4 +45,9 @@ public class NhanVien {
             return 500 * 20000 + (soSanPham - 500) * 30000;
         } else return (soSanPham * 20000);
     }
+
+    public static void tieuDe() {
+        System.out.printf("%-10s %-15s %-15s %-10s\n",
+                "Ma NV", "So SP", "Luong", "Tong ket");
+    }
 }
