@@ -50,4 +50,9 @@ public class NhanVien {
         System.out.printf("%-10s %-15s %-15s %-10s\n",
                 "Ma NV", "So SP", "Luong", "Tong ket");
     }
+
+    public void inDL() {
+        System.out.printf("%-10s %-15d %-15.0f %-10s\n",
+                maNhanVien, soSanPham, getLuong(), getTongKet());
+    }
 }
