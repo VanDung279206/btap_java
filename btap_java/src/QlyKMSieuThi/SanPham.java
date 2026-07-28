@@ -1,4 +1,4 @@
-package y_1;
+package QlyKMSieuThi;
 
 import java.util.Scanner;
 
@@ -15,6 +15,10 @@ public class SanPham {
         this.maSanPham = maSanPham;
         this.tenSanPham = tenSanPham;
         this.donGia = donGia;
+    }
+
+    public String getMaSanPham() {
+        return maSanPham;
     }
 
     public void nhap() {
