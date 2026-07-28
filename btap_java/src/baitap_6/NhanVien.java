@@ -35,8 +35,14 @@ public class NhanVien {
         return soSanPham > 500;
     }
 
-public String getTongKet(){
-        if(coVuotChuan())   return "Vượt chuẩn";
-        else    return "không vượt chuẩn";
-}
+    public String getTongKet() {
+        if (coVuotChuan()) return "Vượt chuẩn";
+        else return "không vượt chuẩn";
+    }
+
+    public double getLuong() {
+        if (coVuotChuan()) {
+            return 500 * 20000 + (soSanPham - 500) * 30000;
+        } else return (soSanPham * 20000);
+    }
 }
