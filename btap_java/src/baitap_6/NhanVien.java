@@ -55,4 +55,10 @@ public class NhanVien {
         System.out.printf("%-10s %-15d %-15.0f %-10s\n",
                 maNhanVien, soSanPham, getLuong(), getTongKet());
     }
+
+    @Override
+    public String toString() {
+        return String.format("%-10s %-15d %-15.0f %-10s",
+                maNhanVien, soSanPham, getLuong(), getTongKet());
+    }
 }
