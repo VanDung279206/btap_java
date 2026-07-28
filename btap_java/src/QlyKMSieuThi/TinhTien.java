@@ -1,4 +1,4 @@
-package y_1;
+package QlyKMSieuThi;
 
 public interface TinhTien {
     double MUC_KH_MAX = 0.2;
