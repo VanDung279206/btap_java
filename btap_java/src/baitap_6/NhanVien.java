@@ -4,4 +4,6 @@ public class NhanVien {
     private String maNhanVien;
     private int soSanPham;
 
+    public NhanVien() {
+    }
 }
