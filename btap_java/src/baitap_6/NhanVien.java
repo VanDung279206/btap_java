@@ -6,4 +6,9 @@ public class NhanVien {
 
     public NhanVien() {
     }
+
+    public NhanVien(String maNhanVien, int soSanPham) {
+        this.maNhanVien = maNhanVien;
+        this.soSanPham = soSanPham;
+    }
 }
