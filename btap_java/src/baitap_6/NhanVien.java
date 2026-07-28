@@ -42,7 +42,7 @@ public class NhanVien {
 
     public double getLuong() {
         if (coVuotChuan()) {
-            return 500 * 20000 + (soSanPham - 500) * 30000;
+            return (double) (500 * 20000 + (soSanPham - 500) * 30000);
         } else return (soSanPham * 20000);
     }
 
