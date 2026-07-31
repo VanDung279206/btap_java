@@ -10,7 +10,7 @@ public class HinhTron extends HinhPhang {
     public void nhap() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("nhập bán kính: ");
+        System.out.print("nhập bán kính hình tròn: ");
         banKinh = sc.nextDouble();
     }
 

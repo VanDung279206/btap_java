@@ -11,10 +11,10 @@ public class HinhChuNhat extends HinhPhang {
     public void nhap() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("nhập chiều dài: ");
+        System.out.print("nhập chiều dài hình chữ nhật: ");
         dai = sc.nextDouble();
 
-        System.out.print("nhập chiều rộng: ");
+        System.out.print("nhập chiều rộng hình chữ nhật: ");
         rong = sc.nextDouble();
     }
 
