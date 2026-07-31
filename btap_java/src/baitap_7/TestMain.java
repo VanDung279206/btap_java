@@ -74,5 +74,13 @@ public class TestMain {
                 return kq;
             }
         });
+
+        System.out.println("\n======== SAU KHI SẮP XẾP ========");
+
+        SinhVien.inTieuDe();
+
+        for(SinhVien x : ds){
+            x.inDuLieu();
+        }
     }
 }
