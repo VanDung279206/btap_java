@@ -51,7 +51,7 @@ public class TestMain {
         System.out.println("\n ========== DANH SÁCH SINH VIÊN ============");
 
         SinhVien.inTieuDe();
-        for(SinhVien x : ds){
+        for (SinhVien x : ds) {
             x.inDuLieu();
         }
 
@@ -67,7 +67,7 @@ public class TestMain {
 
                 int kq = tenA.compareToIgnoreCase(tenB);
 
-                if(kq == 0){
+                if (kq == 0) {
                     return Double.compare(o1.getDiemLyThuyet(), o2.getDiemLyThuyet());
                 }
 
@@ -79,8 +79,21 @@ public class TestMain {
 
         SinhVien.inTieuDe();
 
-        for(SinhVien x : ds){
+        for (SinhVien x : ds) {
             x.inDuLieu();
         }
+
+        //sinh viên có điểm trung bình lớn nhất
+        SinhVien max = ds[0];
+
+        for (SinhVien x : ds) {
+            if (x.getDiemTB() > max.getDiemTB()) {
+                max = x;
+            }
+        }
+
+        System.out.println("\n sinh viên có điểm cao nhất: ");
+        SinhVien.inTieuDe();
+        max.inDuLieu();
     }
 }
