@@ -95,5 +95,18 @@ public class TestMain {
         System.out.println("\n sinh viên có điểm cao nhất: ");
         SinhVien.inTieuDe();
         max.inDuLieu();
+
+        //sinh viên có điểm trung bình nhỏ nhất
+        SinhVien min = ds[0];
+
+        for (SinhVien x : ds) {
+            if (x.getDiemTB() < min.getDiemTB()) {
+                min = x;
+            }
+        }
+
+        System.out.println("\nsinh viên có điểm trung bình thấp nhất: ");
+        SinhVien.inTieuDe();
+        min.inDuLieu();
     }
 }
