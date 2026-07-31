@@ -24,6 +24,41 @@ public class SinhVien {
         this.diemThucHanh = diemThucHanh;
     }
 
+    public String getMaSinhVien() {
+        return maSinhVien;
+    }
+
+    public void setMaSinhVien(String maSinhVien) {
+        this.maSinhVien = maSinhVien;
+    }
+
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public double getDiemLyThuyet() {
+        return diemLyThuyet;
+    }
+
+    public void setDiemLyThuyet(double diemLyThuyet) {
+        this.diemLyThuyet = diemLyThuyet;
+    }
+
+    public double getDiemThucHanh() {
+        return diemThucHanh;
+    }
+
+    public void setDiemThucHanh(double diemThucHanh) {
+        this.diemThucHanh = diemThucHanh;
+    }
+
+    public double getDiemTB(){
+        return (diemLyThuyet + diemThucHanh) / 2;
+    }
     public void nhap() {
         System.out.println("nhập mã sinh viên: ");
         maSinhVien = sc.nextLine();
