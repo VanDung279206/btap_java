@@ -59,6 +59,7 @@ public class SinhVien {
     public double getDiemTB(){
         return (diemLyThuyet + diemThucHanh) / 2;
     }
+
     public void nhap() {
         System.out.println("nhập mã sinh viên: ");
         maSinhVien = sc.nextLine();
@@ -71,10 +72,9 @@ public class SinhVien {
 
         System.out.println("nhập điểm thực hành: ");
         diemThucHanh = Double.parseDouble(sc.nextLine());
-
-        double dtb = (diemLyThuyet + diemThucHanh) / 2;
-        System.out.println("điểm trung bình của sinh viên " + hoTen + " là: " + dtb);
     }
+
+
 
     @Override
     public String toString() {
