@@ -1,5 +1,7 @@
 package baitap_7;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class TestMain {
@@ -52,5 +54,25 @@ public class TestMain {
         for(SinhVien x : ds){
             x.inDuLieu();
         }
+
+        //sắp xếp theo tên
+        Arrays.sort(ds, new Comparator<SinhVien>() {
+            @Override
+            public int compare(SinhVien o1, SinhVien o2) {
+                String tenA = o1.getHoTen().trim();
+                tenA = tenA.substring(tenA.lastIndexOf(" ") + 1);
+
+                String tenB = o2.getHoTen().trim();
+                tenB = tenB.substring(tenB.lastIndexOf(" ") + 1);
+
+                int kq = tenA.compareToIgnoreCase(tenB);
+
+                if(kq == 0){
+                    return Double.compare(o1.getDiemLyThuyet(), o2.getDiemLyThuyet());
+                }
+
+                return kq;
+            }
+        });
     }
 }
