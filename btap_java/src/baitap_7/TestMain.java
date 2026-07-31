@@ -24,7 +24,7 @@ public class TestMain {
         SinhVien sv1 = new SinhVien(ma, ten, dlt, dth);
 
         //sinh viên 2 giả trị cố định
-        SinhVien sv2 = new SinhVien("2024607310", "Nguyễn Văn Dũng", 10, 01);
+        SinhVien sv2 = new SinhVien("2024607310", "Nguyễn Văn Dũng", 10, 10);
 
         //sinh viên 3 tạo mặc định rồi set
         SinhVien sv3 = new SinhVien();
@@ -44,5 +44,13 @@ public class TestMain {
         sv3.setDiemThucHanh(Double.parseDouble(sc.nextLine()));
 
         SinhVien[] ds = {sv1, sv2, sv3};
+
+        //in danh sách
+        System.out.println("\n ========== DANH SÁCH SINH VIÊN ============");
+
+        SinhVien.inTieuDe();
+        for(SinhVien x : ds){
+            x.inDuLieu();
+        }
     }
 }
