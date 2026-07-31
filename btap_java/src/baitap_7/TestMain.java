@@ -24,6 +24,6 @@ public class TestMain {
         SinhVien sv1 = new SinhVien(ma, ten, dlt, dth);
 
         //sinh viên 2 giả trị cố định
-        SinhVien sv2 = new SinhVien(2024607310, "Nguyễn Văn Dũng", 10, 01);
+        SinhVien sv2 = new SinhVien("2024607310", "Nguyễn Văn Dũng", 10, 01);
     }
 }
