@@ -30,15 +30,17 @@ public class Main {
                 if (x.tinhLuong() > max)
                     max = x.tinhLuong();
             }
+
+            System.out.println("\n--- NHAN VIEN CO LUONG CAO NHAT ---");
+            for (NhanVien x : ds) {
+                if (x.tinhLuong() == max)
+                    x.xuat();
+            }
+
         } else {
             System.out.println("danh sach rong");
         }
 
-        System.out.println("\n--- NHAN VIEN CO LUONG CAO NHAT ---");
-        for (NhanVien x : ds) {
-            if (x.tinhLuong() == max)
-                x.xuat();
-        }
 
         System.out.print("\nnhap ma nhan vien can tim kiem: ");
         String maNVTim = sc.nextLine();
