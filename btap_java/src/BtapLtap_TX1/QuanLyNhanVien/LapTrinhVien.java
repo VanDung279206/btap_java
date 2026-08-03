@@ -26,7 +26,7 @@ public class LapTrinhVien extends NhanVien {
     public void xuat() {
         super.xuat();
 
-        System.out.printf("%-10d",
+        System.out.printf("%-10d\n",
                 soGioLamThem);
     }
 
