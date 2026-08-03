@@ -29,7 +29,7 @@ public abstract class NhanVien {
     }
 
     public void xuat() {
-        System.out.printf("%-10s %-15s %-10f %-10f\n",
+        System.out.printf("%-10s %-15s %-10.0f %-10.0f",
                 maNV, hoTen, luongCoBan, tinhLuong());
 
     }
