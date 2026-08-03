@@ -1,0 +1,78 @@
+1. Nền tảng ngôn ngữ
+- kiểu dữ liệu
+    + Nguyên thủy: int, double, float, boolean, chả, byte, short, long.
+    + Tham chiếu: các class, interface, Array, String.
+- Toán tử và điều khiển luồng:
+    + Vòng lặp: for, while, do-while, for-each.
+    + Điều kiện: if-else, switch-case (Switch Expression - gọn hơn)
+- Biến và Phạm Vi: Biến cục bộ(local), biến thực thể(instance), biến tĩnh(final)
+
+2. Lập trình Hướng đối tượng
+Tứ đại nguyên lý:
+2.1.    Đóng gói(Encapsulation): giấu dữ liệu bằng private và giao tiếp qua getter/setter
+2.2.    Kế thừa(Inheritance): dùng extends để tái sử dụng code. Một class chỉ kế thừa 1 class cha, nhưng có
+thể triển khai(implements) nhiều interface.
+2.3.    Đa hình(Polymorphism):
+    + Compile - time: Overloading (Nạp chồng phương thức).
+    + Runtime: Overriding (Ghi đè phương thức thừ class cha).
+2.4.    Trừu tượng(Abstraction): bỏ qua chi tiết, chỉ định nghĩa "cái gì cần làm" thông qua abstract class và
+interface.
+
+|| phạm vi truy cập: private, default, protected, public
+|| từ khóa: static, final, this, super
+
+3. Xử lý chuỗi(String handling)
+String: Bất biến (Immutable). Mỗi lần cộng chuỗi là tạo ra một object mới trên bộ nhớ (String Pool).
+
+StringBuilder: Có thể thay đổi (Mutable), tốc độ cộng/nối chuỗi cực nhanh, không đồng bộ (Not thread-safe).
+
+StringBuffer: Giống StringBuilder nhưng có đồng bộ hóa (Thread-safe), tốc độ chậm hơn một chút.
+
+4. Cấu trúc dữ liệu (Collections Framework & Generics)
+Đây là phần bạn vừa tìm hiểu, dùng để quản lý nhóm dữ liệu:
+
+List (Danh sách): ArrayList, LinkedList, Vector.
+
+Set (Tập hợp không trùng): HashSet, LinkedHashSet, TreeSet.
+
+Map (Khóa-Giá trị): HashMap, LinkedHashMap, TreeMap, Hashtable.
+
+Generics (<T>): Giúp kiểm tra chặt chẽ kiểu dữ liệu lúc biên dịch, tránh lỗi ClassCastException (vd: List<String>).
+
+5. Xử lý Ngoại lệ (Exception Handling)
+Cách Java đối phó với lỗi khi chương trình đang chạy:
+
+Checked Exception: Lỗi bắt buộc phải xử lý lúc viết code (vd: Đọc file không thấy - IOException). Bắt buộc dùng khối try-catch hoặc throws.
+
+Unchecked Exception (RuntimeException): Lỗi logic lập trình (vd: Chia cho 0, truy cập mảng quá giới hạn, NullPointerException).
+
+Từ khóa: try, catch, finally (luôn chạy dù có lỗi hay không), throw (ném lỗi chủ động), throws (đẩy trách nhiệm xử lý lỗi cho hàm gọi nó).
+
+6. Đa luồng (Multithreading)
+Cho phép chạy nhiều tác vụ cùng lúc.
+
+Tạo luồng: Kế thừa class Thread hoặc triển khai interface Runnable.
+
+Vòng đời của Thread: New -> Runnable -> Running -> Blocked/Waiting -> Dead.
+
+Đồng bộ hóa (Synchronization): Từ khóa synchronized để khóa ngăn chặn 2 luồng cùng ghi đè một dữ liệu gây sai lệch (Race Condition).
+
+Thread Pool: Quản lý luồng hiệu quả bằng ExecutorService.
+
+7. Vào/Ra dữ liệu (Java I/O)
+Byte Streams: Đọc/Ghi dữ liệu dạng nhị phân (ảnh, video) - FileInputStream, FileOutputStream.
+
+Character Streams: Đọc/Ghi dữ liệu dạng văn bản (text) - FileReader, FileWriter, BufferedReader (chống trôi lệnh, đọc theo dòng).
+
+NIO (New I/O): Xử lý I/O non-blocking tốc độ cao.
+
+8. Các tính năng hiện đại (Java 8 trở lên)
+Dù gọi là "mới" nhưng đây là tiêu chuẩn bắt buộc khi đi làm:
+
+Lambda Expressions (->): Viết code ngắn gọn thay cho Anonymous Class.
+
+Stream API: Xử lý tập hợp (Collections) cực mạnh với kiểu lập trình khai báo (filter, map, reduce, sorted).
+
+Optional: Giải pháp triệt để thay thế cho việc check if (obj != null), tránh NullPointerException.
+
+Date/Time API: LocalDate, LocalTime, LocalDateTime, ChronoUnit (chuẩn xác và dễ tính toán hơn java.util.Date ngày xưa).
