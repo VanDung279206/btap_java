@@ -17,9 +17,12 @@ public class Main {
             x.nhap(sc);
             ds.add(x);
         }
-        for(NhanVien x : ds){
-            if(x.tinhLuong()max)
-        }
+
+        System.out.println("============ DANH SACH NHAN VIEN VUA NHAP ================");
+        for(NhanVien x : ds)
+            x.xuat();
+
+
 
         System.out.print("nhap ma nha vien can tim kiem: ");
         String maNVTim = sc.nextLine();
