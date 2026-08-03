@@ -76,3 +76,20 @@ Stream API: Xử lý tập hợp (Collections) cực mạnh với kiểu lập t
 Optional: Giải pháp triệt để thay thế cho việc check if (obj != null), tránh NullPointerException.
 
 Date/Time API: LocalDate, LocalTime, LocalDateTime, ChronoUnit (chuẩn xác và dễ tính toán hơn java.util.Date ngày xưa).
+
+2. Stream API
+Khái niệm
+Đừng nhầm lẫn Stream API với I/O Stream (đọc/ghi file).
+Stream API không phải là một cấu trúc dữ liệu để lưu trữ (như List hay Set). Nó giống như một băng chuyền trong nhà máy. Bạn đưa dữ liệu (Collection) lên băng chuyền, sau đó băng chuyền sẽ chạy qua các trạm máy móc (filter, map, sorted...) để gọt giũa và đóng gói ra thành phẩm cuối cùng.
+
+Một luồng Stream luôn trải qua 3 giai đoạn:
+
+Source (Nguồn): Nơi bắt đầu băng chuyền (thường là gọi .stream() từ một List/Set).
+
+Intermediate Operations (Thao tác trung gian): Các trạm xử lý. Đặc điểm của chúng là Lazy (lười biếng) - chúng chưa thực thi ngay mà chỉ ghi nhận chỉ thị. Trả về một Stream mới (ví dụ: filter, map, sorted).
+
+Terminal Operation (Thao tác kết thúc): Điểm cuối của băng chuyền. Khi gọi hàm này, toàn bộ băng chuyền mới thực sự chạy và trả về kết quả (ví dụ: collect, forEach, count, reduce).
+
+Ví dụ minh họa thực tế
+Giả sử bạn có một danh sách các sản phẩm (Class Product gồm: tên, giá).
+Yêu cầu: Lấy ra danh sách tên của các sản phẩm có giá lớn hơn 10.000, tên được viết hoa toàn bộ và sắp xếp theo bảng chữ cái.
