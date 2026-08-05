@@ -1,0 +1,33 @@
+Bài tập 3: Quản lý Hóa đơn Điện (Mức độ: Khó - Tính toán bậc thang & Xóa phần tử)
+Ý 1 (2 điểm): Xây dựng lớp KhachHangDien gồm: mã KH, tên KH. Xây dựng Interface TieuThu chứa các hằng số: Đơn giá bậc 1 = 1678đ, Đơn giá bậc 2 = 1734đ. Khai báo phương thức tinhTienDien().
+
+Ý 2 (2 điểm): Xây dựng lớp HoaDonDien kế thừa KhachHangDien, triển khai Interface TieuThu. Bổ sung: chiSoCu, chiSoMoi. Tiền điện tính theo bậc thang:
+
+Số KW tiêu thụ = chiSoMoi - chiSoCu.
+
+50 KW đầu tiên tính theo Đơn giá bậc 1.
+
+Các KW vượt 50 tính theo Đơn giá bậc 2.
+
+Ý 3 (2 điểm): Nhập danh sách HoaDonDien (kiểm tra điều kiện chiSoMoi >= chiSoCu, nếu sai yêu cầu nhập lại). In danh sách.
+
+Ý 4 (2 điểm): Sắp xếp danh sách theo Tên khách hàng theo thứ tự từ điển (A-Z). (Gợi ý: Dùng compareTo).
+
+Ý 5 (2 điểm): Nhập vào mã KH, tìm và xóa khách hàng đó khỏi danh sách. In lại danh sách sau khi xóa.
+
+
+
+Bài tập 4: Quản lý Nhân viên Sales (Mức độ: Rất khó - Đa Interface & Sắp xếp 2 tiêu chí)
+Ý 1 (2 điểm): Xây dựng lớp NhanVien gồm: mã NV, tên NV, lương cứng (cố định 5.000.000đ). Xây dựng Interface KPI (Chỉ tiêu = 100, Thưởng = 2.000.000đ) và Interface ChuanHoa (chứa phương thức chuanHoaTen()).
+
+Ý 2 (2 điểm): Lớp NhanVienBanHang kế thừa NhanVien và triển khai cả 2 Interface. Bổ sung: soSanPhamBanDuoc.
+
+Lương = Lương cứng + (soSanPhamBanDuoc * 50.000). Nếu soSanPhamBanDuoc >= Chỉ tiêu, cộng thêm phần Thưởng.
+
+Cài đặt chuanHoaTen(): Tự động viết hoa chữ cái đầu tiên của tên nhân viên trước khi xuất ra.
+
+Ý 3 (2 điểm): Nhập/xuất danh sách. Việc nhập sẽ tự động dừng khi người dùng để trống Mã NV (nhấn Enter không nhập gì).
+
+Ý 4 (2 điểm): Sắp xếp danh sách theo lương giảm dần. Nếu lương bằng nhau, tiếp tục sắp xếp theo Tên tăng dần (A-Z).
+
+Ý 5 (2 điểm): Lọc ra những nhân viên đạt KPI (số SP >= Chỉ tiêu), đưa họ vào một Danh sách mới (ArrayList mới) và in danh sách vinh danh này ra màn hình.
