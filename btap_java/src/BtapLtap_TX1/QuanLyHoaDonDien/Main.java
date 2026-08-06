@@ -45,7 +45,21 @@ public class Main {
         boolean daXoa = false;
 
         for (int i = 0; i<ds.size(); i++){
-            if (ds.)
+            if (ds.get(i).getMaKH().equals(maXoa)){
+                ds.remove(i);
+                daXoa = true;
+                break;
+            }
+        }
+
+        if (!daXoa){
+            System.out.println("khong tim thay khach hang co ma: " + maXoa);
+        }else {
+            System.out.println("=========== DANH SACH SAU KH XOA ===========");
+            HoaDonDien.xuatTieuDe();
+            for (HoaDonDien x : ds){
+                x.xuat();
+            }
         }
     }
 }
