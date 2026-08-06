@@ -22,4 +22,8 @@ public abstract class KhachHangDien {
         System.out.printf("%-10s %-20s",
                 maKH, tenKH);
     }
+
+    public String getTenKH() {
+        return tenKH;
+    }
 }
