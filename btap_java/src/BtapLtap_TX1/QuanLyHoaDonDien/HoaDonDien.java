@@ -14,11 +14,11 @@ public class HoaDonDien extends KhachHangDien implements TieuThu {
         super.nhap(sc);
 
         System.out.print("nhap chi so cu: ");
-        chiSoCu = sc.nextDouble();
+        chiSoCu = Double.parseDouble(sc.nextLine());
 
         do {
             System.out.print("nhap vao chi so moi: ");
-            chiSoMoi = sc.nextDouble();
+            chiSoMoi = Double.parseDouble(sc.nextLine());
 
             if (chiSoMoi < chiSoCu) {
                 System.out.println("chi so moi khong duoc nho hon chi so cu");
