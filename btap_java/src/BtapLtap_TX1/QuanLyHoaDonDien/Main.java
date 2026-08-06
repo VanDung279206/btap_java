@@ -28,8 +28,24 @@ public class Main {
         ds.sort(new Comparator<HoaDonDien>() {
             @Override
             public int compare(HoaDonDien o1, HoaDonDien o2) {
-                return o1.ge
+                return o1.getTenKH().compareToIgnoreCase(o2.getTenKH());
             }
         });
+
+        System.out.println("\n============== DANH SACH SAU KHI SAP XEP ====================");
+        HoaDonDien.xuatTieuDe();
+        for (HoaDonDien x : ds){
+            x.xuat();
+        }
+
+        System.out.println("\n ------------- xoa ma khach hang ------------");
+        System.out.print("nhap ma khach hang can tim: ");
+        String maXoa = sc.nextLine();
+
+        boolean daXoa = false;
+
+        for (int i = 0; i<ds.size(); i++){
+            if (ds.)
+        }
     }
 }
