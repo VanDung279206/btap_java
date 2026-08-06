@@ -26,4 +26,8 @@ public abstract class KhachHangDien {
     public String getTenKH() {
         return tenKH;
     }
+
+    public String getMaKH() {
+        return maKH;
+    }
 }
