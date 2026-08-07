@@ -1,0 +1,82 @@
+1.1. Khái niệm về HashMap
+1. Khái quát chức năng, nhiệm vụ
+HashMap là 1 lớp trong Java dùng để lưu trữ dữ liệu dưới dạng cặp key - value
+mỗi phần tử trong HashMap gồm:
+Key -> Value
+VD:
+"SV01" -> "Nguyễn Văn A"
+"SV02" -> "Nguyễn Văn B"
+Trong đó:
+- SV01, SV02 là key
+- tên sinh viên là value
+- mỗi key phải duy nhất
+- các value có thể trùng nhau
+- HashMap cho phép một key có giá trị null và cho phép nhiều value là null
+- HashMap không đảm bảo thứ tự các phần tử
+HashMap thường được sử dụng khi cần tra cứu dữ liệu nhanh dựa trên 1 khóa
+VD thực tế:
+- Mã sinh viên -> tên sinh viên
+- Mã sản phẩm -> thông tin sản phẩm
+- Tên tài khoản -> thông tin người dùng
+- Mã quốc gia -> tên quốc gia
+- từ khóa -> số lần xuất hiện
+
+2. cấu trúc phân cấp của HashMap
+HashMap nằm trong hệ thống Collection Framework của Java
+Cấu trúc phân cấp có thể biểu diễn được như sau:
+                        Map<K, V>
+                            |
+          -----------------------------------------
+          |                                        |
+      AbstractMap<K, V>                           ...
+          |
+      HashMap<K, V>
+
+3. đặc điểm nổi bật của HashMap
+một số đặc điểm quan trọng:
+dạng dữ liệu        :   Key - Value
+Key trùng nhau      :   không
+Value trùng nhau    : có
+Key null            :   có, tối đa 1
+Value null          :   có
+duy trì thứ tự      :   không
+truy cập dữ liệu    :   dựa và key
+cho phép generic    :   có
+tốc độ tìm kiếm     :   O(1)
+thread-safe         :   không
+
+    CÁC PHÉP TOÁN THƯỜNG DÙNG
+1. thêm các phần tử
+put(key, value)
+2. lấy phần tử
+get(key)
+3. xóa phần tử
+remove(key)
+4. sửa phần tử
+dùng put để đè lên key cũ, hoặc replace(key, value)
+5. kiểm tra phần tử
+- key   :   containsKey(1)
+- value :   containsvalue("Nguyễn Văn A")
+6. duyệt các phần tử trong HashMap
+for (Integer key : students.keySet()) {
+    System.out.println(key + " - " + students.get(key));
+}
+for (Map.Entry<Integer, String> entry : students.entrySet()) {
+    System.out.println(
+        entry.getKey() + " - " + entry.getValue()
+    );
+}
+students.forEach((key, value) ->
+    System.out.println(key + " - " + value)
+);
+
+| Đặc điểm          | HashMap       | TreeMap   | LinkedHashMap    | ArrayList       |
+| ----------------- | ------------- | --------- | ---------------- | --------------- |
+| Dữ liệu           | Key-Value     | Key-Value | Key-Value        | Phần tử         |
+| Key               | Có            | Có        | Có               | Không           |
+| Key trùng         | Không         | Không     | Không            | —               |
+| Value trùng       | Có            | Có        | Có               | Có              |
+| Thứ tự            | Không đảm bảo | Theo key  | Theo thứ tự chèn | Theo vị trí     |
+| Truy cập          | Theo key      | Theo key  | Theo key         | Theo index      |
+| Tốc độ tra cứu TB | O(1)          | O(log n)  | O(1)             | O(1) theo index |
+
