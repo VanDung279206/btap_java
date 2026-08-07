@@ -79,4 +79,3 @@ students.forEach((key, value) ->
 | Thứ tự            | Không đảm bảo | Theo key  | Theo thứ tự chèn | Theo vị trí     |
 | Truy cập          | Theo key      | Theo key  | Theo key         | Theo index      |
 | Tốc độ tra cứu TB | O(1)          | O(log n)  | O(1)             | O(1) theo index |
-
