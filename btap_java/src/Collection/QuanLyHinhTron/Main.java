@@ -24,7 +24,7 @@ public class Main {
         System.out.println("\n============= DANH SACH HINH TRON ===============");
 
         for (int i = 0; i < ds.layKichThuoc(); i++) {
-            System.out.println("Hinh Tron "+ (i + 1)+": "+ds.layHinhTron(i));
+            System.out.println("Hinh Tron " + (i + 1) + ": " + ds.layHinhTron(i));
 
         }
 
@@ -33,5 +33,14 @@ public class Main {
 
         //dien tich lon nhat
         System.out.println("Dien tich lon nhat: " + ds.timMaxDT());
+
+        // hinh tron co dien tich nho nhat
+        System.out.println("Hinh tron co dien tich nho nhat: ");
+
+        HinhTron min = ds.timMinHT();
+
+        if (min != null) {
+            System.out.println(min);
+        }
     }
 }
