@@ -12,4 +12,14 @@ public class DSHinhTron {
     public void themHinhTron(HinhTron x){
         ds.add(x);
     }
+
+    //lay so luong hinh tron
+    public int layKichThuoc(){
+        return ds.size();
+    }
+
+    // lay hinh tron tai vi tri index
+    public HinhTron layHinhTron(int index){
+        return ds.get(index);
+    }
 }
