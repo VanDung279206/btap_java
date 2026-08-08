@@ -19,5 +19,13 @@ public class Main {
 
             ds.themHinhTron(x);
         }
+
+        //xuat danh sach
+        System.out.println("\n============= DANH SACH HINH TRON ===============");
+
+        for (int i = 0; i < ds.layKichThuoc(); i++) {
+            System.out.println("Hinh Tron "+ (i + 1)+": "+ds.layHinhTron(i));
+
+        }
     }
 }
