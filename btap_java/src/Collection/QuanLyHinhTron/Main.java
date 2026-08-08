@@ -30,5 +30,8 @@ public class Main {
 
         //tong dien tich
         System.out.println("\nTong dien tich: " + ds.tinhTongDT());
+
+        //dien tich lon nhat
+        System.out.println("Dien tich lon nhat: " + ds.timMaxDT());
     }
 }
