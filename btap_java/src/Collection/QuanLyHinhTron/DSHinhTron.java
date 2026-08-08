@@ -22,4 +22,9 @@ public class DSHinhTron {
     public HinhTron layHinhTron(int index){
         return ds.get(index);
     }
+
+    //gan hinh tron tai vi tri index
+    public void ganHinhTron(int index, HinhTron x){
+        ds.set(index, x);
+    }
 }
