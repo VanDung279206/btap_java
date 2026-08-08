@@ -27,5 +27,8 @@ public class Main {
             System.out.println("Hinh Tron "+ (i + 1)+": "+ds.layHinhTron(i));
 
         }
+
+        //tong dien tich
+        System.out.println("\nTong dien tich: " + ds.tinhTongDT());
     }
 }
