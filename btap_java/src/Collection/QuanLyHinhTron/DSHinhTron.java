@@ -37,4 +37,18 @@ public class DSHinhTron {
         }
         return tong;
     }
+
+    //tim dien tich lon nhat
+    public double timMaxDT(){
+        if (ds.isEmpty())
+            return 0;
+        double max = ds.get(0).tinhDienTich();
+
+        for (HinhTron x : ds){
+            if (x.tinhDienTich() > max){
+                max = x.tinhDienTich();
+            }
+        }
+        return max;
+    }
 }
