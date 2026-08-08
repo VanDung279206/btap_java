@@ -51,4 +51,18 @@ public class DSHinhTron {
         }
         return max;
     }
+
+    // tim hinh tron co dien tich no nhat
+    public HinhTron timMinHT(){
+        if (ds.isEmpty())
+            return null;
+
+        HinhTron min = ds.get(0);
+        for (HinhTron x : ds){
+            if (x.tinhDienTich() < min.tinhDienTich()){
+                min = x;
+            }
+        }
+        return min;
+    }
 }
