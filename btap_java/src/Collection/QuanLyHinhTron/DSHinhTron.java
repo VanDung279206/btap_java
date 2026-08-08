@@ -27,4 +27,14 @@ public class DSHinhTron {
     public void ganHinhTron(int index, HinhTron x){
         ds.set(index, x);
     }
+
+    //tinh tong dien tich
+    public double tinhTongDT(){
+        double tong = 0;
+
+        for (HinhTron x : ds){
+            tong += x.tinhDienTich();
+        }
+        return tong;
+    }
 }
