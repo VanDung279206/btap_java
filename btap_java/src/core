@@ -37,7 +37,8 @@ Set (Tập hợp không trùng): HashSet, LinkedHashSet, TreeSet.
 
 Map (Khóa-Giá trị): HashMap, LinkedHashMap, TreeMap, Hashtable.
 
-Generics (<T>): Giúp kiểm tra chặt chẽ kiểu dữ liệu lúc biên dịch, tránh lỗi ClassCastException (vd: List<String>).
+Generics (<T>): Giúp kiểm tra chặt chẽ kiểu dữ liệu lúc biên dịch, tránh lỗi ClassCastException
+(vd: List<String>).
 
 5. Xử lý Ngoại lệ (Exception Handling)
 Cách Java đối phó với lỗi khi chương trình đang chạy:
