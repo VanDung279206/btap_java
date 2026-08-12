@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -14,6 +15,7 @@ public class QuanLySinhVien extends Frame implements ActionListener {
     private Button btnNhap, btnThem, btnDong;
     // Bien dem so luong sinh vien da nhap (dung khi hien thi danh sach)
     private int soLuongDaNhap = 0;
+    private JPanel panel1;
 
     public QuanLySinhVien() {
         // ===== Thiet lap cua so Frame =====
