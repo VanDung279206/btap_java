@@ -197,6 +197,7 @@ public class QuanLySinhVien extends Frame implements ActionListener {
     /**
      * Xu ly khi bam nut "Dong":
      * Dong cua so va ket thuc chuong trinh.
+     *
      */
     private void xuLyDong() {
         setVisible(false);
